@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import DropdownExampleDropdown from '../Dropdown/Dropdown';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearSearchString, setSearchString } from '../../store/search/searchSlice';
+import { useEffect } from 'react';
+import { getCategories } from '../../store/category/categorySlice';
 
 function Header() {
     const dispatch = useDispatch();
@@ -13,6 +15,9 @@ function Header() {
         dispatch(setSearchString(event.target.value));
     };
 
+    useEffect(() => {
+        dispatch(getCategories());
+    }, []);
 
     return (
         <div className="Header">
