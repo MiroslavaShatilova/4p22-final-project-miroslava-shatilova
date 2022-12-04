@@ -1,0 +1,30 @@
+.CommonButton {
+    
+    outline: none;
+    border: none;
+    background: #1A226B;
+    padding: 8px 20px;
+    color: white;
+    font-size: 20px;
+    border-radius: 0;
+    transition: .2s background-color;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.CommonButton:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.CommonButton:disabled {
+    background-color: #787878;
+    color: black;
+    cursor: wait;
+}
+
+@media screen and (max-width: 1020px) {
+    
+    .CommonButton {
+        font-size: calc(20/1020*100vw);
+    }
+}
